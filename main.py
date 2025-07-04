@@ -7,8 +7,11 @@ import time #time (Задержка)
 import threading #threading (Параллельные процессы)
 import random #random (Рандом коды)
 import mysql.connector #MySQL (База данных)
+from dotenv import load_dotenv
 
-
+dotenv_path = 'keys.env'
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 
 #Инициализация бота
 bottoken = os.getenv("BOT_TOKEN")
