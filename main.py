@@ -14,10 +14,10 @@ if os.path.exists(dotenv_path):
     load_dotenv(dotenv_path)
 
 #Инициализация бота
-bottoken = os.getenv("BOT_TOKEN")
+bottoken = os.environ["BOT_TOKEN"]
 bot = telebot.TeleBot(bottoken) 
 
-adminid1 = os.getenv("ADMIN_ID_1")
+adminid1 = os.environ["ADMIN_ID_1"]
 admins = [adminid1] #Телеграм ID админов
 #print(admins)
 
